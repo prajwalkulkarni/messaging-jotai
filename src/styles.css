@@ -1,0 +1,167 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 170px;
+  border: 8px solid black;
+  border-radius: 25px;
+  position: relative;
+  padding: 0.2rem;
+  margin: 0.5rem;
+}
+
+.phone::before {
+  content: "";
+  width: 50%;
+  height: 4%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: black;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transform: translateX(50%);
+}
+
+.phone::after {
+  content: "";
+  width: 2%;
+  position: absolute;
+  height: 30px;
+  background-color: black;
+  top: 20%;
+  right: -6%;
+}
+
+.statusbar {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-25%);
+  z-index: -1;
+  font-size: x-small;
+  /* background-color: springgreen; */
+}
+
+.statusbar .status {
+  display: flex;
+  margin-right: 0.5rem;
+}
+
+.statusbar .status p {
+  padding-right: 0.2rem;
+}
+
+.phone .messages {
+  /* margin-top: 5px; */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.messages::-webkit-scrollbar {
+  scrollbar-width: none;
+  display: none;
+}
+
+input {
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 2px;
+  width: 80%;
+}
+
+.send {
+  align-self: flex-end;
+  max-width: 50%;
+  height: auto;
+  background-color: #1982fc;
+  color: white;
+  font-size: small;
+  text-align: left;
+  margin: 0.4rem;
+  padding: 0.5rem;
+  border-radius: 15px;
+  position: relative;
+  transition: all 0.2s ease-in;
+  word-wrap: break-word;
+  /* animation: slide 0.5s ; */
+}
+
+.send::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  right: 0;
+  bottom: 0;
+  transform: translateX(50%);
+  border-bottom-left-radius: 50%;
+  background-color: #1982fc;
+}
+
+.send::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  right: 0;
+  bottom: 0;
+  transform: translateX(98%);
+  border-bottom-left-radius: 50%;
+  background-color: white;
+}
+
+.receive {
+  align-self: flex-start;
+  max-width: 50%;
+  height: auto;
+  background-color: lightgray;
+  color: black;
+  font-size: small;
+  text-align: left;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 15px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.receive::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+  border-bottom-right-radius: 50%;
+  background-color: lightgray;
+}
+
+.receive::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-98%);
+  border-bottom-right-radius: 50%;
+  background-color: white;
+}
+
+.bottombar {
+  display: flex;
+}
