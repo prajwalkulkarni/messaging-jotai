@@ -6,4 +6,4 @@ No backend is used, all the data is in-memory and non-persistent.
 <br/>
 
 <hr/>
-##Live demo: [iMessages](https://csb-q462xj.netlify.app)
+<b>Live demo:</b> [iMessages](https://csb-q462xj.netlify.app)
